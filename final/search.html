@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Gene Properties</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/search_product.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/search.js"></script>
+
+</head>
+
+<body id="main">
+
+    <h1>Fasta Entry</h1>
+        <form name="fasta_entry" id="fasta_entry" action="">
+        <input id = "acc" name="acc" type="search" value="" autofocus="autofocus" placeholder="Enter FASTA ID"/>
+        <input id = "sequence" name="sequence" type="search" value="" placeholder="Enter Sequence"/>
+        <input name="submit_entry" type="submit" id="submit_entry" value="submit">
+    </form>
+
+	<h1>Fasta Search</h1>
+    <form name="fasta_search" id="fasta_search" action="">
+        <input id = "search_term" name="search_term" type="search" value="" placeholder="Enter a search term"/>
+        <select id = "column_term" name="column_term">
+            <option value="name">Accession</option>
+            <option value="gc">GC Content</option>
+            <option value="purine">Purine</option>
+            <option value="pyrimidine">Pyrimidine</option>
+        </select>
+        <input name="submit" type="submit" id="submit" value="submit">
+    </form>
+    <section id='results'>
+        <p>
+            <span id='match_count'>0</span> match(es) found.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>Accession</td>
+                <td>A</td>
+                <td>G</td>
+                <td>C</td>
+                <td>T</td>
+                <td>GC</td>
+                <td>PUR</td>
+                <td>PYR</td>
+                <td>LENGTH</td>
+                <td>DATE</td>
+        
+            </tr>
+            </thead>
+            <tbody>
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+</body>
+
+</html>
